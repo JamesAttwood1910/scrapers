@@ -1,1 +1,21 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@1.5.0
+
+jobs: 
+  build-and-test:
+    executor: python/default
+  
+    steps:
+        - checkout
+        - python/load-cache
+        - python/install-deps
+        - python/save-cache
+        - python/test
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
 
