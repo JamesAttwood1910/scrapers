@@ -12,7 +12,7 @@ jobs:
         - python/load-cache
         - python/install-deps
         - python/save-cache
-        - python/test
+        - python/path
 
 workflows:
   main:
